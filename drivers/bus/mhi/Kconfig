@@ -40,4 +40,3 @@ config MHI_BUS_MISC
 
 source "drivers/bus/mhi/devices/Kconfig"
 source "drivers/bus/mhi/controllers/Kconfig"
->>>>>>> topaz-t-oss
