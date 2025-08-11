@@ -324,10 +324,36 @@
   __traceiter_android_vh_alloc_pages_reclaim_bypass
   __traceiter_android_vh_mmput
   __tracepoint_android_vh_alloc_pages_failure_bypass
-  __tracepoint_android_vh_alloc_pages_reclaim_bypass
-  __tracepoint_android_vh_mmput
-
 #required by mifs.ko module
+  __cleancache_get_page
+  __dquot_alloc_space
+  __dquot_free_space
+  __dquot_transfer
+  __filemap_set_wb_err
+  __fscrypt_encrypt_symlink
+  __fscrypt_inode_uses_inline_crypto
+  __fscrypt_prepare_link
+  __fscrypt_prepare_lookup
+  __fscrypt_prepare_readdir
+  __fscrypt_prepare_rename
+  __fscrypt_prepare_setattr
+  __iomap_dio_rw
+  __page_file_mapping
+  __pagevec_release
+  __percpu_counter_init
+  __percpu_counter_sum
+  __set_page_dirty_nobuffers
+  __sync_dirty_buffer
+  __test_set_page_writeback
+  __traceiter_android_fs_dataread_end
+  __traceiter_android_fs_dataread_start
+  __traceiter_android_fs_datawrite_end
+  __traceiter_android_fs_datawrite_start
+  __tracepoint_android_fs_dataread_end
+  __tracepoint_android_fs_dataread_start
+  __tracepoint_android_fs_datawrite_end
+  __tracepoint_android_fs_datawrite_start
+  __xa_clear_mark
   add_swap_extent
   bdev_read_only
   bio_associate_blkg_from_css

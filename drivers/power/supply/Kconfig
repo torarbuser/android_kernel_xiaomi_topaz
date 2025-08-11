@@ -422,6 +422,19 @@ config BATTERY_TWL4030_MADC
 	  Say Y here to enable this dumb driver for batteries managed
 	  through the TWL4030 MADC.
 
+config QTI_BATTERY_CHARGER
+	tristate "QTI Glink battery charger"
+	depends on QTI_PMIC_GLINK
+	help
+	  Say Y here to enable Qualcomm Technologies, Inc. battery charger
+	  driver which interfaces with the charger firmware running on the
+	  remote subsystem (e.g. DSP) by communicating over PMIC Glink channel
+	  and provides information about the battery, USB and wireless charging
+	  by exposing them as power supply devices.
+
+	  To compile the driver as a module, choose M here: the module will be
+	  called qti_battery_charger.
+
 config CHARGER_88PM860X
 	tristate "Marvell 88PM860x Charger driver"
 	depends on MFD_88PM860X && BATTERY_88PM860X
@@ -848,5 +861,15 @@ config CHARGER_SURFACE
 	  Say M or Y here to include AC status support for 7th-generation
 	  Microsoft Surface devices, i.e. Surface Pro 7, Surface Laptop 3,
 	  Surface Book 3, and Surface Laptop Go.
+
+config NOPMI_CHARGER
+	tristate "NOPMI Charger Support"
+	depends on FG_SM5602 && BQ2589X_CHARGER
+	help
+	  Say Y to include support for NOPMI Charger.
+
+source "drivers/power/supply/qcom/Kconfig"
+source "drivers/power/supply/nopmi/Kconfig"
+source "drivers/power/supply/battery_secret/Kconfig"
 
 endif # POWER_SUPPLY

@@ -3693,7 +3693,7 @@ static void ieee80211_rx_mgmt_assoc_resp(struct ieee80211_sub_if_data *sdata,
 	struct ieee80211_mgd_assoc_data *assoc_data = ifmgd->assoc_data;
 	u16 capab_info, status_code, aid;
 	struct ieee802_11_elems *elems;
-	int ac;
+	int ac, uapsd_queues = -1;
 	u8 *pos;
 	bool reassoc;
 	struct cfg80211_bss *cbss;
